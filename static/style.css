@@ -1,0 +1,83 @@
+/* BODY BACKGROUND */
+body {
+    background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f5);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #6b4c5c;
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN CONTAINER (CARD) */
+.container {
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* HEADINGS */
+h1 {
+    color: #ff6f91;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: #b5838d;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 25px;
+    background: linear-gradient(to right, #fff3b0, #ffe5b4);
+    border: none;
+    border-radius: 25px;
+    color: #6b4c5c;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ffe066, #ffd166);
+    transform: scale(1.05);
+}
+
+/* RADIO BUTTON */
+input[type="radio"] {
+    accent-color: #ff8fab;
+}
+
+/* TEXTAREA */
+textarea {
+    width: 80%;
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #ffc2d1;
+    background-color: #fffafd;
+}
+
+/* CODE BOX */
+pre {
+    background-color: #fff0f6;
+    padding: 12px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* RESULT TEXT */
+h2 {
+    color: #ff4d6d;
+}
+
+/* SMALL ANIMATION */
+button:hover {
+    transform: scale(1.08);
+}

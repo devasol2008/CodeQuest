@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Level 1 - CodeQuest</title>
+    <title>Level 3 - CodeQuest</title>
 
-    <!-- CSS LINK -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -14,22 +11,19 @@
 
 <div class="container">
 
-    <h1>Level 1 🚀</h1>
+    <h1>Level 3 💻</h1>
     <h3>Score: {{ score }}</h3>
 
-    <p><b>Question:</b> Which keyword is used to define a function in Python?</p>
+    <p><b>Question:</b> Write Python code to print "Hello"</p>
 
     <form method="POST">
-        <input type="radio" name="answer" value="print"> print <br>
-        <input type="radio" name="answer" value="def"> def <br>
-        <input type="radio" name="answer" value="function"> function <br><br>
-
+        <textarea name="code" rows="6" placeholder="Write your code here..."></textarea><br>
         <button type="submit">Submit</button>
     </form>
 
-    {% if result == "level1_correct" %}
+    {% if result == "level3_correct" %}
         <h2>Correct 🎉</h2>
-        <a href="/level2">
+        <a href="/level4">
             <button>Next Level 🔥</button>
         </a>
     {% elif result == "wrong" %}

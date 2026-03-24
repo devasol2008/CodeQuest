@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 5 - CodeQuest</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Level 5 🐞 Debug Challenge</h1>
+    <h3>Score: {{ score }}</h3>
+
+    <p><b>Question:</b> Fix the errors in this code:</p>
+
+    <pre>
+for i in range(1,5)
+    print(i)
+print("Done)
+    </pre>
+
+    <p>👉 Write the correct code below:</p>
+
+    <form method="POST">
+        <textarea name="code" rows="6" placeholder="Fix the code here..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result == "completed" %}
+        <h2>🎉 You completed CodeQuest!</h2>
+    {% elif result == "wrong" %}
+        <h2>Wrong ❌ Try Again</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
