@@ -29,11 +29,14 @@ print("Done)
         <button type="submit">Submit</button>
     </form>
 
-    {% if result == "completed" %}
-        <h2>🎉 You completed CodeQuest!</h2>
-    {% elif result == "wrong" %}
-        <h2>Wrong ❌ Try Again</h2>
-    {% endif %}
+     {% if result == "go_to_6" %}
+    <h2>Correct 🎉</h2>
+    <a href="/level6">
+        <button>Next Level 🚀</button>
+    </a>
+{% elif result == "wrong" %}
+    <h2>Wrong ❌ Try Again</h2>
+{% endif %}
 
 </div>
 
