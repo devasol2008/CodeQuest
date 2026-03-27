@@ -92,16 +92,15 @@ def level4():
 
     return render_template("level4.html", result=result, score=session.get("score", 0))
 
-# LEVEL 5
 @app.route("/level5", methods=["GET", "POST"])
 def level5():
     result = None
     if request.method == "POST":
         code = request.form.get("code")
-        # Level 5 ka logic (colon aur print dono check kar raha hai)
+        # Is line ko dhyan se dekho, yahan mistake ho sakti hai
         if code and ":" in code and "print" in code:
             session["score"] = session.get("score", 0) + 1
-            result = "go_to_6"  # Level 4 mein 'level4_correct' tha, yahan 'go_to_6' hai
+            result = "go_to_6"  # <--- Ye bilkul aisa hi hona chahiye
         else:
             result = "wrong"
     return render_template("level5.html", result=result, score=session.get("score", 0))
