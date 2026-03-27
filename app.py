@@ -96,16 +96,14 @@ def level4():
 @app.route("/level5", methods=["GET", "POST"])
 def level5():
     result = None
-
     if request.method == "POST":
         code = request.form.get("code")
-
+        # Level 5 ka logic (colon aur print dono check kar raha hai)
         if code and ":" in code and "print" in code:
             session["score"] = session.get("score", 0) + 1
-            result = "completed"
+            result = "go_to_6"  # Level 4 mein 'level4_correct' tha, yahan 'go_to_6' hai
         else:
             result = "wrong"
-
     return render_template("level5.html", result=result, score=session.get("score", 0))
 
 # LEVEL 6 
