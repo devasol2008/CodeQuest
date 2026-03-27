@@ -91,7 +91,7 @@ def level4():
             result = "wrong"
 
     return render_template("level4.html", result=result, score=session.get("score", 0))
-
+# LEVEL 5
 @app.route("/level5", methods=["GET", "POST"])
 def level5():
     result = None
@@ -104,21 +104,22 @@ def level5():
         else:
             result = "wrong"
     return render_template("level5.html", result=result, score=session.get("score", 0))
-
-# LEVEL 6 
+    
+# LEVEL 6
 @app.route("/level6", methods=["GET", "POST"])
 def level6():
     result = None
+    score = session.get("score", 0)
     if request.method == "POST":
-        code = request.form.get("code")
-        # HTML tag check: Heading h1 hona chahiye
-        if code and "<h1>" in code.lower() and "</h1>" in code.lower():
-            session["score"] = session.get("score", 0) + 1
+        code = request.form.get("code", "")
+        # HTML check logic
+        if "<h1>" in code.lower() and "</h1>" in code.lower():
+            session["score"] = score + 1
             result = "completed"
         else:
             result = "wrong"
-    # Sabse zaroori: render_template yahi hona chahiye
     return render_template("level6.html", result=result, score=session.get("score", 0))
+    
 # RUN
 if __name__ == "__main__":
     app.run(debug=True)
